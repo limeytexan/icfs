@@ -1,9 +1,10 @@
 { runCommand, catalogs }:
 let
+  dep_flox = catalogs.brantley.flox;
   dep_python312Packages_llfuse = catalogs.brantley.python312Packages.llfuse;
   dep_python312Packages_pytoml = catalogs.brantley.python312Packages.pytoml;
 in
-runCommand "icfs-1" { pname = "icfs"; version = "1"; inputs = [ dep_python312Packages_llfuse dep_python312Packages_pytoml ]; } ''
+runCommand "icfs-1" { pname = "icfs"; version = "1"; inputs = [ dep_flox dep_python312Packages_llfuse dep_python312Packages_pytoml ]; } ''
   sleep 8
   mkdir -p "$out/share"
   printf '%s\n' "icfs" > "$out/share/name"
