@@ -7,3 +7,7 @@ seconds and writes its name and the store paths of its catalog inputs.
 | package | build time | catalog inputs |
 |---|---|---|
 | `icfs` | 8 s | `flox`, `python312Packages.llfuse`, `python312Packages.pytoml` |
+
+## tests
+
+Tue Nov 10 04:31:14 PM UTC 2026
